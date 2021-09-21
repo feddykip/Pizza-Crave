@@ -15,10 +15,10 @@ Link deployed live on https://feddykip.github.io/Pizza-Crave/index.html
 
 ## TECHNOLOGIES USED
 
-*I used HTML to write the code.
-*CSS and Bootstrap to style and organize it.
-*JavaScript and the jQuery library for functionality.
-*Markdown language on the README section.
+* I used HTML to write the code.
+* CSS and Bootstrap to style and organize it.
+* JavaScript and the jQuery library for functionality.
+* Markdown language on the README section.
 
 ## CONTACT 
 
