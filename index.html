@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Pizza place</title>
+</head>
+<body>
+
+    <section id="head">
+      <div class="container text-center" style="color: white;"></div>
+        <section class="toppage">
+            <div class="container text-center" style="color: white;"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        
+                            <h1>PIZZA CRAVE</h1>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <section id="mid">
+    <div class="container" id="make-order">
+        <h1 id="top-head">Pizza is life!!</h1>
+        <div id="make-Order">
+          <h2>Make Your Pizza Order Here!</h2>
+           <div class="row">
+            <div class="col-md-6">
+              <form id="pizzaForm">
+                <label>Select Size</label><br>
+                <select class="selectpicker" id="pick1">
+                  <option selected value="">select</option>
+                  <option value="small">Small @ 350</option>
+                  <option value="medium">Medium @ 550</option>
+                  <option value="large">Large @ 800</option>
+                </select>
+                <br>
+              
+                <label>Crust</label><br>
+                <select class="selectpicker" id="pick2">
+                  <option selected value="">select</option>
+                  <option value="crispy">Crispy @ 150</option>
+                  <option value="stuffed">Stuffed @ 180</option>
+                  <option value="gluten-free">Gluten-free @ 100</option>
+                </select>
+                <br>
+          
+                <label>Toppings</label><br>
+                <select class="selectpicker" id="pick3">
+                  <option selected value="">select</option>
+                  <option value="bacon">bacon @ 100</option>
+                  <option value="beef">beef mince @ 150</option>
+                  <option value="pepperoni">pepperoni @ 120</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="quantity">Quantity</label><br>
+                    <input type="number" id="quantities" value="quantity" placeholder="Quantity" min="1" max="5" required>
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+              <button class=" btn-success" type="submit" id="submit-btn">Submit Order</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="myorder">
+            <h2>Your Order</h2>
+            <table>
+                    <tr>
+                        <th>Size ,</th>
+                        <th>Crust ,</th>
+                        <th>Toppings ,</th>
+                        <th>Quantity ,</th>
+                        <th>Total ,</th>
+                    </tr>
+            
+                    <tr>
+                        <td id="size"></td>
+                        <td id="crust"></td>
+                        <td id="toppings"></td>
+                        <td id="quantity"></td>
+                        <td id="total"></td>
+                    </tr> 
+            </table>
+            </div>
+            <div class="deliveries">
+                <p id="forDelivery"></p>
+            </div>
+            <br>
+            <div class="delivery text-center">
+                <h2>Delivery</h2>
+                <form action="" class="delivery">
+                    <div class="form-group">
+                        <label for="delivery">Would you like your pizza delivered?</label><br>
+                        <select class="selectpicker" name="" id="delivery" required>
+                            <option disabled selected value>Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <button id="location" class="btn btn-success" type="submit">Submit</button>  
+                </form>
+            </div>
+            <div class="delivered text-center">
+                <h2>Fill your details below.</h2>
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name</label><br>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label><br>
+                        <input type="text" class="form-control" id="phone" placeholder="Ente your number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label><br>
+                        <input type="text" class="form-control" id="userLocation" placeholder="Your location" required>
+                    </div>
+                    <button id="locationYes" class="btn btn-success" type="button">Submit</button>
+                </form>
+            </div> 
+            <div class="nondelivered text-center">
+                <h2>Fill your details below.</h2>
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name</label><br>
+                        <input type="text" class="form-control" id="name1" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label><br>
+                        <input type="text" class="form-control" id="phone1" placeholder="Enter your number" required>
+                    </div>
+                    <button id="locationNo" class="btn btn-success" type="button">Submit</button>
+                </form>
+            </div>  
+            <div id="checkoutAlert" class="alert alert-success alert-dismissible">
+                <table class="table">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th>Item</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Name:</td>
+                    <td><span id="yourName"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Phone Number:</td>
+                    <td><span id="yourPhone"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Delivery Location</td>
+                    <td><span id="deliveryLocation"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Delivery Cost</td>
+                    <td>Ksh 150<span id="deliveryCost"></span></td>
+                  </tr>
+        
+                </table>
+            </div>  
+            <div id="checkoutOne" class="alert alert-success alert-dismissible">
+                <table class="table">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th>Item</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Name:</td>
+                    <td><span id="nameOne"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Phone Number:</td>
+                    <td><span id="phoneOne"></span></td>
+                  </tr>
+                </table>
+            </div>
+            <button id="checkout" class="btn btn-warning" type="button">Checkout to see Order details</button>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container text-center">
+            <div class="social">
+                <img src="https://cdn-icons-png.flaticon.com/128/220/220342.png" alt=""width="30px" height="30px">
+                <img src="https://cdn-icons-png.flaticon.com/128/220/220375.png" alt=""width="30px" height="30px">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt=""width="30px" height="30px">
+                <img src="https://cdn-icons-png.flaticon.com/128/174/174857.png" alt=""width="30px" height="30px">
+                <img src="https://cdn-icons-png.flaticon.com/128/732/732200.png" alt=""width="30px" height="30px">
+            </div>
+            <p>©2021 pizza crave</p>
+        </div>
+    </section>
+</body>
+</html>

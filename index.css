@@ -1,0 +1,40 @@
+.delivered, .nondelivered, #checkout, #checkoutOne, #checkoutAlert, #checkoutOne{
+    display: none;
+}
+#myorder {
+    display: none;
+}
+
+#head{
+    background-image: url(https://images.unsplash.com/photo-1513104890138-7c749659a591?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGl6emF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100%;
+    height: 550px;
+
+}
+html{
+    margin: 15px;
+}
+#mid{
+    background-color: azure;
+    padding: 30px;
+}
+#head h1{
+    text-align: center;
+    color: white;
+    font-weight: 1000;
+    font-size: 70px;
+}
+#myorder, #size, #crust, #toppings, #quantity, #total{
+    padding: 9px;
+}
+.social{
+    padding: 30px;
+}
+.footer{
+    background-color: #565665;
+    color: white;
+}
+    
